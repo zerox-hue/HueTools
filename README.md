@@ -1,4 +1,4 @@
-# :green_book: __Hue-Kill__ V 1.0.0
+# :green_book: __HueTools__ V 1.0.0
 
 
 # :blue_book:  __ Documentation__
