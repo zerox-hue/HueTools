@@ -1,3 +1,5 @@
+https://img.shields.io/github/downloads/zerox-hue/HueTools/total
+
 # :green_book: __HueTools__ V 1.0.0
 
 
