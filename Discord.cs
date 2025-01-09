@@ -11,14 +11,6 @@ namespace HueToolsDiscord
     public class HueToolsDiscord : Plugin
     {
         public HueToolsDiscord(IGameAPI aPI) : base(aPI) { }
-
-        public static string SuccessColors = "#85E085";
-        public static string ErrorColors = "#DD4B4E";
-        public static string WarningColors = "#FCBE86";
-        public static string InfoColors = "#4287F9";
-        public static string GreyColors = "#ADADAD";
-        public static string PurpleColors = "#DB70DB";
-
         public Config config;
 
         public class Config
@@ -72,15 +64,15 @@ namespace HueToolsDiscord
 
         public void OnSlahDiscord(Player player)
         {
-            UIPanel panel = new UIPanel($"<color={ErrorColors}>Discord</color>", UIPanel.PanelType.Text);
+            UIPanel panel = new UIPanel($"<color=#d10f29>Discord</color>", UIPanel.PanelType.Text);
 
-            panel.SetText($"Le Discord de <color={PurpleColors}> {Nova.serverInfo.serverListName} </color> est <color={SuccessColors}> {config.DiscordServerUrl} </color> !");
+            panel.SetText($"Le Discord de <color=#1f0fd1> {Nova.serverInfo.serverListName} </color> est <color={SuccessColors}> {config.DiscordServerUrl} </color> !");
 
             panel.AddButton("Fermer", ui => player.ClosePanel(ui));
 
             player.ShowPanelUI(panel);
 
-            player.SendText($"Le Discord de <color={PurpleColors}> {Nova.serverInfo.serverListName} </color> est <color={SuccessColors}> {config.DiscordServerUrl} </color> !");
+            player.SendText($"Le Discord de <color=#1f0fd1> {Nova.serverInfo.serverListName} </color> est <color=#1fcc30> {config.DiscordServerUrl} </color> !");
             
         }
     }
