@@ -11,13 +11,6 @@ namespace HueToolsFuelEvent
     {
         public HueToolsFuelEvent(IGameAPI aPI) : base(aPI) { }
 
-        public static string SuccessColors = "#85E085";
-        public static string ErrorColors = "#DD4B4E";
-        public static string WarningColors = "#FCBE86";
-        public static string InfoColors = "#4287F9";
-        public static string GreyColors = "#ADADAD";
-        public static string PurpleColors = "#DB70DB";
-
         public Config3 config3;
 
         public class Config3
@@ -93,7 +86,7 @@ namespace HueToolsFuelEvent
             if (config3.Message)
             {
 
-                Nova.server.SendMessageToAll($"<color={ErrorColors}>[HueTools] </color> Le prix D'essence a été modifié à <color={SuccessColors}><b>{Nova.server.config.roleplayConfig.fuelPrice}</color></b> € !");
+                Nova.server.SendMessageToAll($"<color=#d10f29>[HueTools] </color> Le prix D'essence a été modifié à <color=#0fd13c><b>{Nova.server.config.roleplayConfig.fuelPrice}</color></b> € !");
 
 
 
@@ -124,19 +117,19 @@ namespace HueToolsFuelEvent
 
                 UIPanel panel = new UIPanel($"<color={ErrorColors}>Fuel</color>", UIPanel.PanelType.Text);
 
-                panel.SetText($"L'essence est actuellement à <color={SuccessColors}>{Nova.server.config.roleplayConfig.fuelPrice.ToString()} </color>€ ! ");
+                panel.SetText($"L'essence est actuellement à <color=#0fd13c>{Nova.server.config.roleplayConfig.fuelPrice.ToString()} </color>€ ! ");
 
                 panel.AddButton("Fermer", ui => player.ClosePanel(ui));
 
                 player.ShowPanelUI(panel);
 
-                player.SendText($"<color={ErrorColors}>[HueTools] </color>L'essence est actuellement à <color={SuccessColors}>{Nova.server.config.roleplayConfig.fuelPrice.ToString()} </color>€ ! ");
+                player.SendText($"<color=#d10f29>[HueTools] </color>L'essence est actuellement à <color=#0fd13c>{Nova.server.config.roleplayConfig.fuelPrice.ToString()} </color>€ ! ");
 
  
             }
             else
             {
-                player.SendText($"<color={ErrorColors}>[HueTools] </color>L'essence est actuellement à <color={SuccessColors}>{Nova.server.config.roleplayConfig.fuelPrice.ToString()} </color>€ ! ");
+                player.SendText($"<color=#d10f29>[HueTools] </color>L'essence est actuellement à <color=#0fd13c>{Nova.server.config.roleplayConfig.fuelPrice.ToString()} </color>€ ! ");
             }
         }
     }
