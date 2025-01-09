@@ -18,16 +18,6 @@ namespace HueToolsEvent
     {
         public HueTools(IGameAPI aPI) : base(aPI) { }
 
-
-
-
-        public static string SuccessColors = "#85E085";
-        public static string ErrorColors = "#DD4B4E";
-        public static string WarningColors = "#FCBE86";
-        public static string InfoColors = "#4287F9";
-        public static string GreyColors = "#ADADAD";
-        public static string PurpleColors = "#DB70DB";
-
         public class DiscordWebhook
         {
             private static readonly HttpClient client = new HttpClient();
@@ -153,7 +143,7 @@ namespace HueToolsEvent
         {
             if (player.account.adminLevel >= config.LevelAdminRequired)
             {
-                UIPanel panel = new UIPanel($"<color={ErrorColors}>Event</color>", UIPanel.PanelType.Tab);
+                UIPanel panel = new UIPanel($"<color=#d10f29>Event</color>", UIPanel.PanelType.Tab);
 
                 panel.AddTabLine("<b>Mute/UnMute All</b>", ui =>
                 {
@@ -224,13 +214,13 @@ namespace HueToolsEvent
             if (!player.setup.voice.Networkmegaphone) {
 
                 
-                player.SendText($"<color={ErrorColors}>[HueTools]</color> <color={SuccessColors}> Tu as bien activé ton mégaphone admin ! </color>");
+                player.SendText($"<color=#d10f29>[HueTools]</color> <color=#0fd142> Tu as bien activé ton mégaphone admin ! </color>");
 
                 player.setup.voice.Networkmegaphone = true;
             } 
             else
             {
-                player.SendText($"<color={ErrorColors}> [HueTools] </color> <color={SuccessColors}> Tu as bien désavtivé ton mégaphone admin ! </color>");
+                player.SendText($"<color=#d10f29> [HueTools] </color> <color=#0fd142> Tu as bien désavtivé ton mégaphone admin ! </color>");
 
                 player.setup.voice.Networkmegaphone = false;
             }
@@ -245,17 +235,17 @@ namespace HueToolsEvent
                     {
                         players.setup.voice.NetworkisMuted = false;
 
-                        player.SendText($"<color={ErrorColors}>[HueTools]</color> <color={SuccessColors}> Tu as Unmute tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
+                        player.SendText($"<color=#d10f29>[HueTools]</color> <color=#0fd142> Tu as Unmute tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
 
-                        players.SendText($"<color={ErrorColors}>[HueTools]</color> <color={SuccessColors}> Tu as été Unmute comme tous les joueurs du serveur avec succés ! </color>");
+                        players.SendText($"<color=#d10f29>[HueTools]</color> <color=#0fd142> Tu as été Unmute comme tous les joueurs du serveur avec succés ! </color>");
                     }
                     else
                     {
                         players.setup.voice.NetworkisMuted = true;
 
-                        player.SendText($"<color={ErrorColors}>[HueTools]</color> <color={SuccessColors}> Tu as Mute tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
+                        player.SendText($"<color=#d10f29>[HueTools]</color> <color=#0fd142> Tu as Mute tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
 
-                        players.SendText($"<color={ErrorColors}>[HueTools]</color> <color={SuccessColors}> Tu as été Mute comme tous les joueurs du serveur avec succés ! </color>");
+                        players.SendText($"<color=#d10f29>[HueTools]</color> <color=#0fd142> Tu as été Mute comme tous les joueurs du serveur avec succés ! </color>");
                     }
                 }
             }
@@ -271,17 +261,17 @@ namespace HueToolsEvent
                     {
                         players.setup.voice.NetworkisMuted = false;
 
-                        player.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as Unfreeze tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
+                        player.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as Unfreeze tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
 
-                        players.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as été Unfreeze comme tous les joueurs du serveur avec succés ! </color>");
+                        players.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as été Unfreeze comme tous les joueurs du serveur avec succés ! </color>");
                     }
                     else
                     {
                         players.setup.NetworkisFreezed = true;
 
-                        player.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as Freeze tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
+                        player.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as Freeze tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
 
-                        players.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as été Freeze comme tous les joueurs du serveur avec succés ! </color>");
+                        players.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as été Freeze comme tous les joueurs du serveur avec succés ! </color>");
                     }
                 }
             }
@@ -300,9 +290,9 @@ namespace HueToolsEvent
 
                         players.setup.TargetSetPosition(player.setup.transform.position);
 
-                        player.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as Téleportée tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
+                        player.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as Téleportée tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
 
-                        players.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as été Téleportée comme tous les joueurs du serveur avec succés ! </color>");
+                        players.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as été Téleportée comme tous les joueurs du serveur avec succés ! </color>");
 
                     }
                     else
@@ -310,9 +300,9 @@ namespace HueToolsEvent
 
                         players.setup.TargetSetPosition(player.setup.transform.position);
 
-                        player.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as Téleportée tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
+                        player.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as Téleportée tous les joueurs du serveur avec succés (sauf les admins) ! </color>");
 
-                        players.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as été Téleportée comme tous les joueurs du serveur avec succés ! </color>");
+                        players.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as été Téleportée comme tous les joueurs du serveur avec succés ! </color>");
                     }
 
                 }
@@ -330,9 +320,9 @@ namespace HueToolsEvent
 
                     players.setup.TargetExitVehicle();
 
-                    player.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as sortis  tous les joueurs du serveur de leur voiture avec succés ! </color>");
+                    player.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as sortis  tous les joueurs du serveur de leur voiture avec succés ! </color>");
 
-                    players.SendText($"<color={ErrorColors}>[HueTools]</color><color={SuccessColors}> Tu as été sortis de ta voiture comme tous les joueurs étant du serveur avec succés ! </color>");
+                    players.SendText($"<color=#d10f29>[HueTools]</color><color=#0fd142> Tu as été sortis de ta voiture comme tous les joueurs étant du serveur avec succés ! </color>");
                 }
 
             }
@@ -391,7 +381,7 @@ namespace HueToolsEvent
 
         public void EventAlerter(Player player)
         {
-            UIPanel panel = new UIPanel($"<color={ErrorColors}> EventAlerter </color>", UIPanel.PanelType.Input);
+            UIPanel panel = new UIPanel($"<color=#d10f29> EventAlerter </color>", UIPanel.PanelType.Input);
 
             panel.SetInputPlaceholder("Entrez le type de l'évenement...");
 
@@ -399,12 +389,12 @@ namespace HueToolsEvent
 
             panel.AddButton("Valider", ui =>
             {
-                UIPanel panel1 = new UIPanel($"<color={ErrorColors}> EventAlerter Gain </color>", UIPanel.PanelType.Tab);
+                UIPanel panel1 = new UIPanel($"<color=#d10f29> EventAlerter Gain </color>", UIPanel.PanelType.Tab);
 
 
                 panel1.AddTabLine("Oui", ui1 =>
                 {
-                    UIPanel panel2 = new UIPanel($"<color={ErrorColors}> EventAlerter Date", UIPanel.PanelType.Input);
+                    UIPanel panel2 = new UIPanel($"<color=#d10f29> EventAlerter Date", UIPanel.PanelType.Input);
 
                     panel2.SetInputPlaceholder("Entrez la date de l'évent (JJ/MM HH:MM)...");
 
@@ -412,7 +402,7 @@ namespace HueToolsEvent
 
                     panel2.AddButton("Valider", ui2 =>
                     {
-                        UIPanel panel3 = new UIPanel($"<color={ErrorColors}> EventAlerter Description", UIPanel.PanelType.Input);
+                        UIPanel panel3 = new UIPanel($"<color=#d10f29> EventAlerter Description", UIPanel.PanelType.Input);
 
                         panel3.SetInputPlaceholder("Entrez La description de l'évenement....");
 
@@ -420,7 +410,7 @@ namespace HueToolsEvent
 
                         panel3.AddButton("Valider", ui3 =>
                         {
-                            UIPanel panel4 = new UIPanel($"<color={ErrorColors}>Mention Everyone</color>", UIPanel.PanelType.Tab);
+                            UIPanel panel4 = new UIPanel($"<color=#d10f29>Mention Everyone</color>", UIPanel.PanelType.Tab);
 
                             panel4.AddTabLine("Mentionner", async ui4 =>
                             {
@@ -520,7 +510,7 @@ namespace HueToolsEvent
 
                 panel1.AddTabLine("Non", ui1 =>
                 {
-                    UIPanel panel9 = new UIPanel($"<color={ErrorColors}> EventAlerter Date", UIPanel.PanelType.Input);
+                    UIPanel panel9 = new UIPanel($"<color=#d10f29> EventAlerter Date", UIPanel.PanelType.Input);
 
                     panel9.SetInputPlaceholder("Entrez la date de l'évent (JJ/MM HH:MM)...");
 
@@ -528,7 +518,7 @@ namespace HueToolsEvent
 
                     panel9.AddButton("Valider", ui9 =>
                     {
-                        UIPanel panel8 = new UIPanel($"<color={ErrorColors}> EventAlerter Descriptions </color>", UIPanel.PanelType.Input);
+                        UIPanel panel8 = new UIPanel($"<color=#d10f29> EventAlerter Descriptions </color>", UIPanel.PanelType.Input);
 
                         panel8.SetInputPlaceholder("Entrez La description de l'évenement....");
 
@@ -536,7 +526,7 @@ namespace HueToolsEvent
 
                         panel8.AddButton("Valider", ui8 =>
                         {
-                            UIPanel panel4 = new UIPanel($"<color={ErrorColors}>Mention Everyone</color>", UIPanel.PanelType.Tab);
+                            UIPanel panel4 = new UIPanel($"<color=#d10f29>Mention Everyone</color>", UIPanel.PanelType.Tab);
 
                             panel4.AddTabLine("Mentionner", async ui4 =>
                             {
