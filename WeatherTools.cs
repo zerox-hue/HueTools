@@ -12,13 +12,6 @@ namespace HueWeatherTools
     {
         public HueWeatherTools(IGameAPI aPI) : base(aPI) { }
 
-        public static string SuccessColors = "#85E085";
-        public static string ErrorColors = "#DD4B4E";
-        public static string WarningColors = "#FCBE86";
-        public static string InfoColors = "#4287F9";
-        public static string GreyColors = "#ADADAD";
-        public static string PurpleColors = "#DB70DB";
-
         public Config config;
 
         public class Config
@@ -75,7 +68,7 @@ namespace HueWeatherTools
                 {
                     Nova.server.world.SetWeather(Life.Network.Systems.SWorld.Weather.ClearSky);
 
-                    Nova.server.SendMessageToAll($"<color={ErrorColors}>[HueTools]</color> Le ciel s'éclaircie !");
+                    Nova.server.SendMessageToAll($"<color=#cc1f2d>[HueTools]</color> Le ciel s'éclaircie !");
                 }
                 else
                 {
@@ -88,7 +81,7 @@ namespace HueWeatherTools
                 {
                     Nova.server.world.SetWeather(Life.Network.Systems.SWorld.Weather.Cloudy1);
 
-                    Nova.server.SendMessageToAll($"<color={ErrorColors}>[HueTools]</color> Le ciel s'éclaircie !");
+                    Nova.server.SendMessageToAll($"<color=#cc1f2d>[HueTools]</color> Le ciel s'éclaircie !");
                 }
                 else
                 {
@@ -101,7 +94,7 @@ namespace HueWeatherTools
                 {
                     Nova.server.world.SetWeather(Life.Network.Systems.SWorld.Weather.HeavyRain);
 
-                    Nova.server.SendMessageToAll($"<color={ErrorColors}>[HueTools]</color> La pluie s'abbat sur la ville!");
+                    Nova.server.SendMessageToAll($"<color=#cc1f2d>[HueTools]</color> La pluie s'abbat sur la ville!");
                 }
                 else
                 {
@@ -114,7 +107,7 @@ namespace HueWeatherTools
                 {
                     Nova.server.world.SetWeather(Life.Network.Systems.SWorld.Weather.Storm);
 
-                    Nova.server.SendMessageToAll($"<color={ErrorColors}>[HueTools]</color> Il y a une tempête de fort vent s'abbate sur la ville puis il y a de l'orage et de la pluie !");
+                    Nova.server.SendMessageToAll($"<color=#cc1f2d>[HueTools]</color> Il y a une tempête de fort vent s'abbate sur la ville puis il y a de l'orage et de la pluie !");
                 }
                 else
                 {
@@ -127,7 +120,7 @@ namespace HueWeatherTools
                 {
                     Nova.server.world.SetWeather(Life.Network.Systems.SWorld.Weather.ClearSky);
 
-                    Nova.server.SendMessageToAll($"<color={ErrorColors}>[HueTools]</color> Le ciel s'éclaircie !");
+                    Nova.server.SendMessageToAll($"<color=#cc1f2d>[HueTools]</color> Le ciel s'éclaircie !");
                 }
                 else
                 {
